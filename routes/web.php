@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\UniqueActionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -75,7 +77,7 @@ route::prefix('admin/')->group(function (){
 
 // nouvelle route
 
-route::get('/test',function () {
-    return view('test');
-});
+route::get('/test',[MainController::class, 'index']);
+
+route::get('/unique',UniqueActionController::class);
 
