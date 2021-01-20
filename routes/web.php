@@ -50,11 +50,16 @@ route::get('/articles/{id}/comments/{author?}', function ($id,$author = 'un bg '
 
 /* cas ou plusieurs fois meme route
     utiliser prefix
-*/
+    reponse permet de modifier le statut
+    redirect redirection
+
 
 route::prefix('admin/')->group(function (){
     route::get('users',function (){
-        return 'my user list';
+        return  response()->json([
+            'name' => 'amine',
+            'age' => 25,
+        ]);
     });
 
     route::get('articles',function (){
@@ -66,3 +71,11 @@ route::prefix('admin/')->group(function (){
     });
 
 });
+*/
+
+// nouvelle route
+
+route::get('/test',function () {
+    return view('test');
+});
+
