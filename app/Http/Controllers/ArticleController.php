@@ -23,7 +23,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -34,7 +34,10 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       if($request->missing('name')){
+           die('not OH');
+       }
+       die('bgggggggggggggggggg');
     }
 
     /**
