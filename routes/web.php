@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
+
 use App\Http\Controllers\MainController;
-use App\Http\Controllers\UniqueActionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -78,4 +77,5 @@ route::prefix('admin/')->group(function (){
 
 // nouvelle route
 
+Route::get('/',[MainController::class,'home']);
 
