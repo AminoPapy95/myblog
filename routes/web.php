@@ -78,9 +78,4 @@ route::prefix('admin/')->group(function (){
 
 // nouvelle route
 
-route::get('/test',[MainController::class, 'index']);
-
-route::get('/unique',UniqueActionController::class);
-
-route::resource('articles',ArticleController::class);
 
