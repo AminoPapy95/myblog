@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('home') }}">
             <i class="fas fa-home"></i>
             Acceuil
         </a>
@@ -10,17 +10,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{{ route('articles') }}">Articles</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 @if(Auth::user())
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Déconnexion</a>
+                        <form method="post" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="btn">Déconnexion</button>
+                        </form>
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Me connecter</a>
+                        <a class="nav-link" href="{{ route('login') }}">Me connecter</a>
                     </li>
                 @endif
             </ul>
