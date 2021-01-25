@@ -9,7 +9,7 @@
                 <div class="col-md-6">
                     <div class="card my-3">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $article->title }}</h5>
+                            <h5 class="card-title">{{ $article->title }}</h5
                             <p class="card-text"> {{ $article->subtitle }}</p>
                             <a href="#" class="btn btn-primary">
                                 <i class="fas fa-arrow-right"></i>
@@ -21,7 +21,7 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-center mt-5">
-            {{ $articles->links() }}
+            {{ $articles->links('vendor.pagination.custom') }}
         </div>
     </div>
 @endsection
