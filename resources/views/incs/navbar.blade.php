@@ -15,6 +15,11 @@
             </ul>
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 @if(Auth::user())
+                    @if(Auth::user()->role === 'ADMIN')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('articles.index') }}">Espace Admin</a>
+                        </li>
+                    @endif
                     <li class="nav-item">
                         <form method="post" action="{{ route('logout') }}">
                             @csrf
