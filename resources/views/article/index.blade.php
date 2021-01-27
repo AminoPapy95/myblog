@@ -17,7 +17,7 @@
                 <tr>
                     <td>{{ $article->id }}</td>
                     <td>{{ $article->title }}</td>
-                    <td>{{$article->created_at }}</td>
+                    <td>{{ $article->dateFormatted()  }}</td>
                     <td class="d-flex">
                         <a href="#" class="btn btn-warning mx-3">Editer</a>
                         <a href="#" class="btn btn-danger mx-3">Supprimer</a>
